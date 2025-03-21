@@ -1,0 +1,174 @@
+/* Main styles for Pokemon Player State Tracker */
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    margin-top: auto;
+}
+
+/* Pokemon type colors */
+.type-normal { background-color: #A8A878; }
+.type-fire { background-color: #F08030; }
+.type-water { background-color: #6890F0; }
+.type-grass { background-color: #78C850; }
+.type-electric { background-color: #F8D030; }
+.type-ice { background-color: #98D8D8; }
+.type-fighting { background-color: #C03028; }
+.type-poison { background-color: #A040A0; }
+.type-ground { background-color: #E0C068; }
+.type-flying { background-color: #A890F0; }
+.type-psychic { background-color: #F85888; }
+.type-bug { background-color: #A8B820; }
+.type-rock { background-color: #B8A038; }
+.type-ghost { background-color: #705898; }
+.type-dragon { background-color: #7038F8; }
+.type-dark { background-color: #705848; }
+.type-steel { background-color: #B8B8D0; }
+.type-fairy { background-color: #EE99AC; }
+
+.type-badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    color: white;
+    font-size: 0.8rem;
+    margin-right: 0.25rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Pokemon card styles */
+.pokemon-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.pokemon-card:hover {
+    transform: translateY(-5px);
+}
+
+.pokemon-card .card-header {
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+}
+
+.pokemon-card .stats-bar {
+    height: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    background-color: #e9ecef;
+}
+
+.pokemon-card .stats-bar-fill {
+    height: 100%;
+    border-radius: 5px;
+    background-color: #28a745;
+}
+
+/* Location map styles */
+.location-map {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    background-color: #f8f9fa;
+}
+
+.location-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.accessible-locations {
+    margin-top: 1rem;
+}
+
+.accessible-location-item {
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.accessible-location-item:hover {
+    background-color: #e9ecef;
+}
+
+/* Thought history styles */
+.thought-item {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid #6c757d;
+    background-color: #f8f9fa;
+}
+
+.thought-category {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.thought-category-general { background-color: #6c757d; color: white; }
+.thought-category-battle { background-color: #dc3545; color: white; }
+.thought-category-exploration { background-color: #28a745; color: white; }
+
+.thought-timestamp {
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+/* Battle history styles */
+.battle-item {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.battle-result-win { color: #28a745; }
+.battle-result-loss { color: #dc3545; }
+.battle-result-draw { color: #6c757d; }
+
+/* Matchup record styles */
+.matchup-item {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.matchup-record {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+}
+
+.matchup-wins { color: #28a745; }
+.matchup-losses { color: #dc3545; }
+.matchup-draws { color: #6c757d; }
+
+/* Loading spinner */
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* Pagination styles */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
