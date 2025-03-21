@@ -7,7 +7,7 @@ import time
 from typing import Dict, List, Any
 
 # Set the base URL for the API
-BASE_URL = "http://localhost:8000"
+BASE_URL = "http://localhost:8000/api"
 
 class PokemonPlayerStateTrackerTest(unittest.TestCase):
     """Test cases for the Pokemon Player State Tracker API"""

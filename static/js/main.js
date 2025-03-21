@@ -1,7 +1,7 @@
 // Main JavaScript file for Pokemon Player State Tracker
 
 // API base URL
-const API_BASE_URL = 'http://localhost:8000';
+const API_BASE_URL = 'http://localhost:8000/api';
 
 // Utility functions
 function formatDate(dateString) {
@@ -70,7 +70,8 @@ async function apiRequest(endpoint, method = 'GET', data = null) {
 // Check if API server is running
 async function checkApiStatus() {
     try {
-        const result = await apiRequest('/');
+        // Check the API endpoint
+        const result = await apiRequest('/players/');
         console.log('API Status:', result);
         return result.success;
     } catch (error) {

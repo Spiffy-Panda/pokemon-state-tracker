@@ -18,10 +18,10 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 # Set up templates
 templates = Jinja2Templates(directory="templates")
 
-# Create API router
+# Create API router with /api prefix for better organization
 api_router = APIRouter(prefix="/api")
 
-# Include API routes
+# Include API routes under /api
 api_router.include_router(player.router)
 api_router.include_router(save.router)
 
@@ -45,4 +45,4 @@ async def saves_page(request: Request):
 
 # Run the application
 if __name__ == "__main__":
-    uvicorn.run("server.main:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("server.main_new:app", host="0.0.0.0", port=8000, reload=True)
